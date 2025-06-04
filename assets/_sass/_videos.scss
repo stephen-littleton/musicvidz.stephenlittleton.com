@@ -1,0 +1,39 @@
+.videos img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 1px 1px 3px 1px #073082;
+  border: 1px solid #b5deda;
+}
+
+.videos img:hover {
+  box-shadow: 1px 1px 17px 1px #ff00e6;
+}
+
+.videos h3 {
+  font-size: 0.9em;
+  color: #b700ff;
+  font-family: 'Syne Mono';
+}
+
+.videos time {
+  padding-bottom: 10px;
+}
+
+@media(min-width: 800px) {
+  .videos li {
+    width: 31%;
+    display: inline-block;
+    padding: 1%;
+    text-align: center;
+  }
+}
+
+.description {
+  font-family: 'Syne Mono';
+  padding: 25px 5%;
+  background-color: black;
+  box-shadow: 1px 1px 3px 1px #073082;
+  border-radius: 11px;
+  border: 1px solid black;
+  color: #b5deda;
+}

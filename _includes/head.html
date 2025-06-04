@@ -1,0 +1,44 @@
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='{{ site.description }}' />
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
+  <link rel="alternate" type="application/rss+xml" title="MusicVidz RSS Feed" href="{{ site.url }}/feed.xml" />
+  <link rel='canonical'
+        href='{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}'>
+
+  <title>
+    {{ site.name }}
+    {% if page.title %}| {{ page.title }}{% endif %}
+  </title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.name }}{% if page.title %}| {{ page.title }}{% endif %}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="768">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ site.url }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ site.name }}{% if page.title %}| {{ page.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+        
+  <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/assets/app.css' />
+  <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
+
+  <!--[if lte IE 8]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>

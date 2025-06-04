@@ -1,0 +1,24 @@
+---
+layout: base
+permalink: /
+---
+<header>
+  <img src='{{ site.baseurl }}/assets/img/favicon.svg' width="300" height="300"/>
+  <nav role='navigation'>
+    <a href='{{ site.baseurl }}/videos'><blink>MORE VIDEOS</blink></a>
+  </nav>
+</header>
+<center>
+<ul class='videos'>
+  {% assign videos = site.videos | reverse %}
+  {% for video in videos limit: 1 %}
+  <li>
+    <a href='{{ site.baseurl }}{{ video.url }}'>
+      <h3>{{ video.title }}</h3>
+      <time>{{ video.date | date: '%d %B %Y'}}</time>
+      <img src='https://i.ytimg.com/vi/{{ video.youtube_id }}/hqdefault.jpg' />
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+</center>

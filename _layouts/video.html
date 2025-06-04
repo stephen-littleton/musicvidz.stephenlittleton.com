@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article itemscope itemtype='http://schema.org/VideoObject'>
+<meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg">
+<meta itemprop="embedUrl" content="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}">
+  <header>
+	  <h2 itemprop='name'>{{ page.title }}</h2>
+	  <time itemprop='uploadDate' content='{{ page.date }}'>
+	    {{ page.date | date: '%d %B %Y'}}
+	  </time>
+	</header>
+	<section class='video-wrapper'>
+		<iframe src='https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}'
+		        itemprop='embedUrl'
+		        frameborder='0'
+		        allowfullscreen 
+				>
+		</iframe>
+	</section>
+	<section class='description' itemprop='description'>
+  	{{ content }}
+    </section>
+</article>

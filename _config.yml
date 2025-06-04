@@ -1,0 +1,42 @@
+name: MusicVidz
+description: A selection of music videos.
+url: 'https://musicvidz.stephenlittleton.com'
+baseurl: ''
+email: stephen@stephenlittleton.com
+# twitter: stephenxxxxxxxx
+# youtube:
+# facebook:
+# google_analytics: ''
+
+################################################################
+################################################################
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+sass:
+  sass_dir: /assets/_sass
+  style: :compressed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
+  - copysite
+  - go
+collections:
+  videos:
+    output: true
+    permalink: /:path/
+defaults:
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ''
+      type: videos
+    values:
+      layout: video
